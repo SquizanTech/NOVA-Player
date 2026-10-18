@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b12">
+  <title>NOVA Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">NOVA<span>PLAYER</span></a>
+    <span class="status">REPRODUCTOR WEB</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">TU CONTENIDO, EN UN SOLO LUGAR</p>
+      <h1>Tu reproductor.<br><span>Sin complicaciones.</span></h1>
+      <p class="description">
+        Introduce un enlace magnet compatible y reproduce contenido
+        con el reproductor integrado de Webtor.
+      </p>
+    </section>
+
+    <section class="player-card">
+      <label for="magnet">ENLACE MAGNET</label>
+      <form id="magnet-form">
+        <input
+          id="magnet"
+          type="text"
+          placeholder="magnet:?xt=urn:btih:..."
+          autocomplete="off"
+          required
+        >
+        <button type="submit">REPRODUCIR <span>▶</span></button>
+      </form>
+
+      <div id="player" class="player">
+        <div class="player-placeholder">
+          <div class="play-icon">▶</div>
+          <h2>Listo para reproducir</h2>
+          <p>Introduce un enlace magnet para empezar.</p>
+        </div>
+      </div>
+
+      <p id="message" class="message" aria-live="polite">
+        Esperando un enlace.
+      </p>
+    </section>
+
+    <footer>
+      NOVA PLAYER · Interfaz web experimental
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
